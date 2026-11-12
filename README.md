@@ -15,6 +15,10 @@ This repository contains solutions for the three questions in Lab 4b.
 6. Confirm `books.json` is valid JSON using an editor's JSON validation or a JSON validator.
 
 ## Screenshot
+-json file
+<img width="915" height="392" alt="image" src="https://github.com/user-attachments/assets/b703f54d-d6c8-4a32-977b-f78335d98d3e" />
+-json file validation
+<img width="960" height="590" alt="image" src="https://github.com/user-attachments/assets/552bf9d9-ed87-465c-ac57-5bf4857e2dc8" />
 - `books.html` webpage with all required outputs visible.
  <img width="1918" height="985" alt="image" src="https://github.com/user-attachments/assets/ed44c8f3-04e5-46cf-a523-9e22125e1b9b" />
 - `jquery-dom.html` showing “Modified Text” and coral styled div.
