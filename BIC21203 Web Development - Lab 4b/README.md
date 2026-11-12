@@ -1,5 +1,4 @@
 # BIC21203 Lab 4b — JSON and jQuery
-
 This repository contains solutions for the three questions in Lab 4b.
 
 ## Files
@@ -22,12 +21,3 @@ This repository contains solutions for the three questions in Lab 4b.
   <img width="1916" height="909" alt="image" src="https://github.com/user-attachments/assets/28f82e67-fd7e-4914-b923-c890a664bd69" />
 - The “Button clicked!” alert after clicking the button.
 <img width="1916" height="986" alt="image" src="https://github.com/user-attachments/assets/e47b18d7-7b97-426c-8383-89d1d46fe758" />
-## Suggested report contents
-- Question 1: screenshot and explanation of JSON structure/data types.
-- Question 2: screenshot and explanation of `fetch()`, `response.json()`, `textContent`, `createElement`, and error handling.
-- Question 3: screenshots, explanation of `.text()`, `.addClass()`, and `.on()`.
-- A short comparison: native JavaScript has no extra library dependency; jQuery remains practical in older existing projects already using it.
-- GitHub repository URL: **replace with your URL**.
-
-## GitHub upload
-Create a repository on GitHub, upload these files and your screenshots if desired, then copy the repository URL into your PDF report.
