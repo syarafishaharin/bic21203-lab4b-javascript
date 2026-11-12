@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Information</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 30px; line-height: 1.6; }
+    h1 { color: #243b53; }
+    #error { color: #b00020; }
+  </style>
+</head>
+<body>
+  <h1>Book Information</h1>
+  <div id="bookResults">Loading books...</div>
+  <p id="error" role="alert"></p>
+
+  <script>
+    async function loadBooks() {
+      const results = document.getElementById("bookResults");
+      const error = document.getElementById("error");
+
+      try {
+        const response = await fetch("books.json");
+        if (!response.ok) {
+          throw new Error("Could not load the book data.");
+        }
+
+        const data = await response.json();
+        if (!data || !Array.isArray(data.books) || data.books.length < 2) {
+          throw new Error("The book data is incomplete or invalid.");
+        }
+
+        const [firstBook, secondBook] = data.books;
+        for (const book of data.books) {
+          if (typeof book.title !== "string" ||
+              typeof book.author !== "string" ||
+              !Array.isArray(book.genres) ||
+              !book.genres.every(genre => typeof genre === "string")) {
+            throw new Error("The book data has an invalid format.");
+          }
+        }
+
+        results.textContent = "";
+
+        function addLine(label, value) {
+          const paragraph = document.createElement("p");
+          const boldLabel = document.createElement("strong");
+          boldLabel.textContent = label;
+          paragraph.appendChild(boldLabel);
+          paragraph.appendChild(document.createTextNode(value));
+          results.appendChild(paragraph);
+        }
+
+        addLine("Title of first book: ", firstBook.title);
+        addLine("Author of second book: ", secondBook.author);
+
+        const heading = document.createElement("h2");
+        heading.textContent = "Genres by Book";
+        results.appendChild(heading);
+        for (const book of data.books) {
+          addLine(book.title + " — ", book.genres.join(", "));
+        }
+      } catch (err) {
+        results.textContent = "";
+        error.textContent = "Unable to display books. Please check books.json and try again.";
+        console.error(err);
+      }
+    }
+
+    loadBooks();
+  </script>
+</body>
+</html>
