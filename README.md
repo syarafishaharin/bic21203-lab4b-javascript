@@ -16,7 +16,7 @@ This repository contains solutions for the three questions in Lab 4b.
 
 ## Screenshot
 -json file
-<img width="915" height="392" alt="image" src="https://github.com/user-attachments/assets/b703f54d-d6c8-4a32-977b-f78335d98d3e" />
+<img width="1408" height="437" alt="image" src="https://github.com/user-attachments/assets/923a6911-9782-4606-925c-4f3d1f3e7116" />
 -json file validation
 <img width="960" height="590" alt="image" src="https://github.com/user-attachments/assets/552bf9d9-ed87-465c-ac57-5bf4857e2dc8" />
 - `books.html` webpage with all required outputs visible.
